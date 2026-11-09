@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aisah Mutiara Sari, S.T. — Portofolio Profesional</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome untuk ikon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0f172a',
+                        accent: '#2563eb',
+                        surface: '#1e293b'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Kelas dasar untuk efek animasi scroll */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 1s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        @keyframes pulseGlow {
+            0%, 100% { transform: scale(1); opacity: 0.2; }
+            50% { transform: scale(1.05); opacity: 0.3; }
+        }
+        .bg-glow {
+            animation: pulseGlow 6s infinite ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-accent selection:text-white">
+
+    <!-- NAVIGASI -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-slate-900/80 backdrop-blur-md border-b border-slate-800 transition-all duration-300">
+        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="#" class="font-bold text-lg tracking-wider text-white flex items-center gap-2">
+                <span class="w-3 h-3 rounded-full bg-blue-500 animate-pulse"></span>
+                AISAH.MS
+            </a>
+            <nav class="hidden md:flex gap-8 text-sm font-medium text-slate-300">
+                <a href="#about" class="hover:text-blue-400 transition-colors">Tentang</a>
+                <a href="#experience" class="hover:text-blue-400 transition-colors">Pengalaman</a>
+                <a href="#organization" class="hover:text-blue-400 transition-colors">Organisasi</a>
+                <a href="#skills" class="hover:text-blue-400 transition-colors">Keahlian</a>
+                <a href="#contact" class="hover:text-blue-400 transition-colors">Kontak</a>
+            </nav>
+            <a href="#contact" class="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-600 hover:bg-blue-500 text-white text-xs font-semibold tracking-wide transition-all duration-300 hover:scale-105 shadow-lg shadow-blue-600/30">
+                <i class="fa-solid fa-paper-plane"></i> Hubungi Saya
+            </a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION DENGAN FOTO -->
+    <section class="min-h-screen flex items-center justify-center pt-28 pb-16 px-6 relative overflow-hidden bg-gradient-to-b from-slate-900 via-slate-950 to-slate-950">
+        <!-- Efek Cahaya Latar Belakang Bergerak -->
+        <div class="absolute w-96 h-96 bg-blue-600/10 rounded-full blur-3xl top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none bg-glow"></div>
+        
+        <div class="max-w-4xl mx-auto text-center z-10">
+            
+            <!-- FOTO PROFIL DENGAN EFEK HOVER BERGERAK -->
+            <div class="mb-6 flex justify-center">
+                <div class="relative w-40 h-40 md:w-48 md:h-48 rounded-full p-1.5 bg-gradient-to-tr from-blue-500 to-indigo-500 shadow-2xl shadow-blue-500/30 transition-transform duration-500 hover:scale-105">
+                    <img src="foto-profil.jpg" alt="Aisah Mutiara Sari" class="w-full h-full object-cover object-top rounded-full bg-slate-800">
+                </div>
+            </div>
+
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-semibold mb-6 uppercase tracking-widest">
+                <i class="fa-solid fa-graduation-cap"></i> S1 Teknik Elektro - Universitas Diponegoro
+            </div>
+            <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight text-white mb-6">
+                Aisah Mutiara Sari, <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-500">S.T.</span>
+            </h1>
+            <p class="text-lg md:text-xl text-slate-300 max-w-2xl mx-auto mb-10 leading-relaxed font-light">
+                Berpengalaman dalam <strong class="text-white font-medium">administrasi operasional, instruktur teknis, dan manajemen proyek pelatihan vokasi</strong> dengan standar komisi profesional tinggi.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#experience" class="px-7 py-3.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-medium text-sm transition-all duration-300 hover:scale-105 shadow-xl shadow-blue-600/20 flex items-center gap-2">
+                    <i class="fa-solid fa-briefcase"></i> Lihat Pengalaman
+                </a>
+                <a href="#contact" class="px-7 py-3.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-medium text-sm border border-slate-700 transition-all duration-300 hover:scale-105 flex items-center gap-2">
+                    <i class="fa-solid fa-address-book"></i> Hubungi Saya
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- TENTANG SAYA -->
+    <section id="about" class="py-24 px-6 border-t border-slate-900 bg-slate-950">
+        <div class="max-w-4xl mx-auto reveal">
+            <h2 class="text-2xl md:text-3xl font-bold text-white mb-6 flex items-center gap-3">
+                <span class="w-8 h-1 bg-blue-500 rounded-full"></span> Tentang Saya
+            </h2>
+            <div class="bg-slate-900/50 border border-slate-800/80 rounded-2xl p-8 backdrop-blur-sm shadow-xl leading-relaxed text-slate-300">
+                <p class="mb-4">
+                    Lulusan S1 Teknik Elektro Universitas Diponegoro (<strong class="text-white">IPK 3,21</strong>) yang memiliki rekam jejak kuat dalam pengelolaan administrasi operasional, instruktur komputer, serta manajemen program nasional pemerintah.
+                </p>
+                <p>
+                    Terbiasa mengoordinasikan program PKW Elektronika Kemendikdasmen dan Pelatihan Kemnaker secara akurat. Memiliki ketertarikan mendalam pada modernisasi pendidikan vokasi, sistem kontrol, serta pengembangan teknologi masa depan.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PENGALAMAN KERJA -->
+    <section id="experience" class="py-24 px-6 border-t border-slate-900 bg-slate-900/30">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-2xl md:text-3xl font-bold text-white mb-12 flex items-center gap-3 reveal">
+                <span class="w-8 h-1 bg-blue-500 rounded-full"></span> Pengalaman Profesional
+            </h2>
+
+            <div class="space-y-8">
+                <!-- Pengalaman 1 -->
+                <div class="reveal bg-slate-900 border border-slate-800 p-8 rounded-2xl shadow-xl transition-all duration-300 hover:border-blue-500/50 hover:-translate-y-1">
+                    <div class="flex flex-col md:flex-row justify-between md:items-center mb-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-white">Admin & Instruktur Komputer Office</h3>
+                            <p class="text-blue-400 font-medium text-sm">LPK Sugeng Elektronik, Demak</p>
+                        </div>
+                        <span class="mt-2 md:mt-0 text-xs font-semibold px-3 py-1 bg-blue-500/10 text-blue-400 rounded-full border border-blue-500/20 w-fit">Desember 2025 – Sekarang</span>
+                    </div>
+                    <ul class="space-y-3 text-slate-300 text-sm list-disc pl-5">
+                        <li><strong class="text-white">Manajemen Proyek Pemerintah:</strong> Mengoordinasikan administrasi terpadu, pendataan peserta, hingga penyusunan LPJ Program PKW Elektronika (Kemendikdasmen) & Pelatihan Vokasi (Kemnaker).</li>
+                        <li><strong class="text-white">Administrasi Operasional:</strong> Mengelola jadwal pelatihan, dokumentasi data peserta, serta sistem kearsipan operasional harian lembaga secara terstruktur.</li>
+                        <li><strong class="text-white">Pengembangan Kurikulum & Pengajaran:</strong> Menyusun modul ajar, kurikulum, serta membimbing peserta dalam penguasaan Komputer Office dan Elektronika Dasar.</li>
+                    </ul>
+                </div>
+
+                <!-- Pengalaman 2 -->
+                <div class="reveal bg-slate-900 border border-slate-800 p-8 rounded-2xl shadow-xl transition-all duration-300 hover:border-blue-500/50 hover:-translate-y-1">
+                    <div class="flex flex-col md:flex-row justify-between md:items-center mb-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-white">Praktik Kerja Lapangan (PKL) – Kilang & Utilitas</h3>
+                            <p class="text-blue-400 font-medium text-sm">PPSDM Migas, Cepu</p>
+                        </div>
+                        <span class="mt-2 md:mt-0 text-xs font-semibold px-3 py-1 bg-blue-500/10 text-blue-400 rounded-full border border-blue-500/20 w-fit">Juli 2021</span>
+                    </div>
+                    <ul class="space-y-3 text-slate-300 text-sm list-disc pl-5">
+                        <li>Menganalisis sistem pengendalian proses pada unit <em>Crude Distillation Unit</em> (CDU) di kilang bahan bakar minyak.</li>
+                        <li>Mengeksplorasi pemisahan fraksi produk minyak bumi dari proses distilasi atmosferik.</li>
+                        <li>Menyusun laporan teknis komprehensif mengenai evaluasi kinerja variabel pengendalian operasi kilang.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ORGANISASI & KEPEMIMPINAN -->
+    <section id="organization" class="py-24 px-6 border-t border-slate-900 bg-slate-950">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-2xl md:text-3xl font-bold text-white mb-12 flex items-center gap-3 reveal">
+                <span class="w-8 h-1 bg-blue-500 rounded-full"></span> Pengalaman Organisasi
+            </h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="reveal bg-slate-900/60 border border-slate-800 p-6 rounded-2xl transition-all duration-300 hover:-translate-y-1">
+                    <span class="text-xs text-blue-400 font-semibold">Maret 2020 – November 2020</span>
+                    <h3 class="text-lg font-bold text-white mt-1">Ketua Divisi Hubungan Masyarakat (Humas)</h3>
+                    <p class="text-sm text-slate-400 mb-3">MOMENTUM FT UNDIP</p>
+                    <p class="text-sm text-slate-300">Memimpin program kerja divisi, mengarahkan alokasi tugas anggota, serta mengelola alur komunikasi internal dan eksternal organisasi.</p>
+                </div>
+                <div class="reveal bg-slate-900/60 border border-slate-800 p-6 rounded-2xl transition-all duration-300 hover:-translate-y-1">
+                    <span class="text-xs text-blue-400 font-semibold">Maret 2019 – Februari 2020</span>
+                    <h3 class="text-lg font-bold text-white mt-1">Staff Divisi Humas & PIC Roadshow</h3>
+                    <p class="text-sm text-slate-400 mb-3">MOMENTUM FT UNDIP</p>
+                    <p class="text-sm text-slate-300">Bertanggung jawab sebagai Penanggung Jawab (PIC) pelaksanaan program kerja Roadshow Universitas di Universitas Gadjah Mada (UGM).</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- KEAHLIAN & SERTIFIKASI -->
+    <section id="skills" class="py-24 px-6 border-t border-slate-900 bg-slate-900/30">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-2xl md:text-3xl font-bold text-white mb-12 flex items-center gap-3 reveal">
+                <span class="w-8 h-1 bg-blue-500 rounded-full"></span> Keahlian & Sertifikasi
+            </h2>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Hard Skills -->
+                <div class="reveal bg-slate-900 border border-slate-800 p-8 rounded-2xl shadow-xl transition-all duration-300 hover:-translate-y-1">
+                    <h3 class="text-lg font-bold text-white mb-4 flex items-center gap-2">
+                        <i class="fa-solid fa-code text-blue-400"></i> Keahlian Teknis (Hard Skills)
+                    </h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-200 text-xs font-medium border border-slate-700">Sistem Kontrol & Proses</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-200 text-xs font-medium border border-slate-700">Microsoft Office Lanjutan</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-200 text-xs font-medium border border-slate-700">AutoCAD</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-200 text-xs font-medium border border-slate-700">Fritzing</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-200 text-xs font-medium border border-slate-700">Canva</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-200 text-xs font-medium border border-slate-700">Manajemen Database & LPJ</span>
+                    </div>
+                </div>
+
+                <!-- Sertifikasi -->
+                <div class="reveal bg-slate-900 border border-slate-800 p-8 rounded-2xl shadow-xl transition-all duration-300 hover:-translate-y-1">
+                    <h3 class="text-lg font-bold text-white mb-4 flex items-center gap-2">
+                        <i class="fa-solid fa-certificate text-blue-400"></i> Sertifikasi & Pelatihan
+                    </h3>
+                    <ul class="space-y-3 text-sm text-slate-300">
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-check text-blue-400 mt-1"></span>
+                            <div><strong>Sertifikat Junior Office Operator</strong><br><span class="text-xs text-slate-400">LSP (25 Agustus 2026)</span></div>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-check text-blue-400 mt-1"></i>
+                            <div><strong>Pelatihan PKW Elektronika Dasar</strong><br><span class="text-xs text-slate-400">LKP Sugeng Elektronik / Kemendikdasmen (2025)</span></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- KONTAK -->
+    <section id="contact" class="py-24 px-6 border-t border-slate-900 bg-slate-950">
+        <div class="max-w-4xl mx-auto text-center reveal">
+            <h2 class="text-2xl md:text-3xl font-bold text-white mb-6">Hubungi Saya</h2>
+            <p class="text-slate-400 mb-10 max-w-xl mx-auto">
+                Terbuka untuk peluang karier profesional, kolaborasi instansi, maupun posisi administratif dan teknis. Silakan hubungi melalui kontak di bawah ini:
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="mailto:aisahmutiarasari@gmail.com" class="px-6 py-3.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-800 text-slate-200 text-sm font-medium transition-all duration-300 hover:scale-105 flex items-center gap-3">
+                    <i class="fa-solid fa-envelope text-blue-400"></i> aisahmutiarasari@gmail.com
+                </a>
+                <a href="https://wa.me/6285713717735" target="_blank" class="px-6 py-3.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-800 text-slate-200 text-sm font-medium transition-all duration-300 hover:scale-105 flex items-center gap-3">
+                    <i class="fa-brands fa-whatsapp text-emerald-400"></i> +62 857-1371-7735
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-8 border-t border-slate-900 text-center text-xs text-slate-500 bg-slate-950">
+        <p>&copy; 2026 Aisah Mutiara Sari, S.T. All rights reserved.</p>
+    </footer>
+
+    <!-- SCRIPT JAVASCRIPT UNTUK ANIMASI SCROLL -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const reveals = document.querySelectorAll(".reveal");
+
+            function revealOnScroll() {
+                reveals.forEach(element => {
+                    const windowHeight = window.innerHeight;
+                    const elementTop = element.getBoundingClientRect().top;
+                    const elementVisible = 100;
+
+                    if (elementTop < windowHeight - elementVisible) {
+                        element.classList.add("active");
+                    }
+                });
+            }
+
+            window.addEventListener("scroll", revealOnScroll);
+            // Jalankan sekali saat halaman dimuat
+            revealOnScroll();
+        });
+    </script>
+
+</body>
+</html>
